@@ -2,23 +2,20 @@
 using namespace std;
 
 int main(){
-    int i, Max, M_line;
+    int i, M_line, Max = 0;
     int Number[9];
 
-    for(i=0; i<9; i++) cin >> Number[i];
-
-    Max = Number[0];
-
     for(i=0; i<9; i++){
-        
+        cin >> Number[i];
+
         if(Number[i]>Max){
             Max = Number[i];
-            M_line = i;
+            M_line = i+1;
         }
     }
 
     cout << Max <<endl;
-    cout << M_line+1 <<'\n';
+    cout << M_line <<endl;
 
     return 0;
 }
